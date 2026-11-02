@@ -5,7 +5,8 @@ from pico2d import *
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 from boy import Boy
-from grass import Grass
+from grass import Grass1
+from grass import Grass2
 import game_world
 
 
@@ -25,13 +26,13 @@ def handle_events():
 def reset_world():
     global boy
 
-    grass = Grass()
+    grass = Grass2()
     game_world.add_object(grass, 2)
 
     boy = Boy()
     game_world.add_object(boy, 1)
 
-    grass = Grass()
+    grass = Grass1()
     game_world.add_object(grass, 0)
 
 

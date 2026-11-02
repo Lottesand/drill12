@@ -37,6 +37,8 @@ def update():
     if world and isinstance(world[0], list):
         for layer in world:
             for o in layer.copy():
+                if 2 in layer:
+                    o.draw().self.y - 20
                 o.update()
     else:
         for o in world.copy():
@@ -47,8 +49,11 @@ def update():
 def render():
     if world and isinstance(world[0], list):
         for layer in world:
+            if 2 in layer:
+                o.draw()
             for o in layer:
                 o.draw()
+                
     else:
         for o in world:
             o.draw()
